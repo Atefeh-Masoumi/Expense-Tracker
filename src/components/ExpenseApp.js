@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Chart from "./Chart";
 import OverView from "./OverView";
 import Transaction from "./Transaction";
 
@@ -26,6 +27,7 @@ const ExpenseApp = () => {
         <section className="container">
          <OverView income={income} expense={expense} addTransaction={addTransaction}/>
          <Transaction transaction={transaction}/>
+         <Chart income={income} expense={expense} transaction={transaction}/>
 
       </section>
      );
